@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Please choose a language</h1>
+    <h2>Please choose a language</h2>
     <ul>
       <li v-for="lang in availableLanguages">
         <router-link :to="lang">{{ lang }}</router-link>

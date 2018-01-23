@@ -62,3 +62,8 @@ ul.no-bullets {
   list-style-type: none;
   padding: 0px;
 }
+
+a {
+  color: $link_color;
+  text-decoration: none;
+}

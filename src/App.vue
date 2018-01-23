@@ -11,7 +11,7 @@
 </template>
 
 <script>
-// Utilitaires
+// Utilities
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Pym from 'pym.js'
@@ -21,23 +21,35 @@ import VueAnalytics from 'vue-analytics'
 import Border from './components/Border'
 import Logo from './components/Logo'
 import LangSelector from './components/LangSelector'
+
+// Story composants
 import TapStory from './components/TapStory'
+
+// Configuration
+import { availableLanguages } from './config.json'
 
 const router = new VueRouter({
   routes: [
     { 
       path: '/',
       component: LangSelector, 
-      props: { 
-        availableLanguages: ['fr', 'en', 'es', 'de', 'pt', 'ar']
-        }
-      },
+      props: { availableLanguages }
+    },
     { 
       path: '/:lang', 
-      component: TapStory, 
+      component: TapStory, // Define here the main story composant
       props: true
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.params.lang && availableLanguages.indexOf(to.params.lang) === -1) {
+    return next({
+      path: '/'
+    })
+  }
+  next()
 })
 
 Vue.use(VueRouter)
