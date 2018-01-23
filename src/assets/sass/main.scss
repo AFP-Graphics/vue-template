@@ -5,6 +5,7 @@
 @import './colors.scss';
 @import './variables.scss';
 
+@import './typography.scss';
 @import './buttons.scss';
 @import './transitions.scss';
 
@@ -14,10 +15,7 @@
 }
 
 html, body {
-  font-family: $primary_font;
-  color: $font_color;
-  background-color: $background_color;
-  font-size: $font_size;
-  margin: 0;
-  padding: 0;
+  background-color: $white;
+  margin: auto;
+  max-width: 600px;
 }

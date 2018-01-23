@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
   main, footer {
-    padding: 0 12px 0 12px;
+    padding: 12px 16px 18px 12px;
   }
   footer {
     display: flex;

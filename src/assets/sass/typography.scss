@@ -1,0 +1,64 @@
+html, body {
+  font-family: $source_sans_pro;
+  color: $font_color;
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-tap-highlight-color: $black;
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+}   
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.3rem;
+  line-height: 1.05;
+  letter-spacing: -.035rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  letter-spacing: -.025rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  letter-spacing: -.025rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+  margin-bottom: 2.5rem;
+}
+
+p {
+  line-height: 2.4rem;
+}
+
+p.condensed {
+  line-height: 1.8rem;
+}
+
+p.small {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+em {
+  font-style: italic;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0px;
+}
