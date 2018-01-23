@@ -5,12 +5,18 @@
 </template>
 
 <script>
+import Pym from 'pym.js'
+import './assets/sass/main.scss'
+
 export default {
   name: 'app',
   data () {
     return {
       msg: 'Hello World 📦 🚀'
     }
+  },
+  mounted () {
+    new Pym.Child({ polling: 500 })
   }
 }
 </script>

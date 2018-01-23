@@ -1,0 +1,21 @@
+@import './normalize.css';
+
+@import './fonts.scss';
+@import './icons.scss';
+@import './colors.scss';
+@import './variables.scss';
+
+@import './buttons.scss';
+@import './transitions.scss';
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: anti-aliased;
+}
+
+html, body {
+  font-family: $primary_font;
+  color: $font_color;
+  background-color: $background_color;
+  font-size: $font_size;
+}

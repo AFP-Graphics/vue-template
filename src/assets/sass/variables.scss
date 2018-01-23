@@ -1,0 +1,12 @@
+$primary_font: $source_sans_pro;
+$font_size: 16px;
+
+$brand_color: #0280c3;
+$background_color: $white;
+$font_color: #231f20;
+$link_color: #148bcb;
+
+// BREAKPOINTS
+$break-small  : 'screen and (min-width: 500px)';
+$break-medium : 'screen and (min-width: 600px)';
+$break-large : 'screen and (min-width: 680px)';

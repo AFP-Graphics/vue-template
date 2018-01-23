@@ -4,15 +4,17 @@
   "description": "",
   "main": "",
   "scripts": {
-    "dev": "parcel index.html",
-    "watch": "parcel watch index.html",
-    "build": "parcel build index.html --out-dir build --public-url ./",
+    "dev": "parcel index.html --no-cache",
+    "watch": "parcel watch index.html --no-cache",
+    "build": "parcel build index.html --out-dir build --public-url ./  --no-cache",
     "clean": "rimraf .cache build dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "pym.js": "^1.3.1"
+  },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-preset-env": "^1.6.1",
