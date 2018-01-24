@@ -6,14 +6,9 @@
 </template>
 
 <script>
-const stories = {
-  'fr': import('../stories/fr.txt'),
-  'en': import('../stories/en.txt')
-}
-
 export default {
   name: 'tap-story',
-  props: ['lang'],
+  props: ['lang', 'availableStories'],
   data () {
     return {
       msg: 'Hello World 📦 🚀',
@@ -33,7 +28,7 @@ export default {
   },
   methods: {
     async loadStory() {
-      this.$set(this.stories, this.lang, await stories[this.lang])
+      this.$set(this.stories, this.lang, await this.availableStories[this.lang])
     }
   }
 }
