@@ -25,11 +25,15 @@ import LangSelector from './components/LangSelector'
 // Story composants
 import TapStory from './components/TapStory'
 
-// Stories
+// ****** Stories
+// Define here the main story composant
+const mainComponent = TapStory
+// Define here the different languages
 const stories = {
   'fr': import('./stories/fr.txt'),
   'en': import('./stories/en.txt')
 }
+// ****** End Stories
 const availableLanguages = Object.keys(stories)
 
 const router = new VueRouter({
@@ -41,7 +45,7 @@ const router = new VueRouter({
     },
     { 
       path: '/:lang', 
-      component: TapStory, // Define here the main story composant
+      component: mainComponent,
       props: route => ({
         availableStories: stories,
         lang: route.params.lang
