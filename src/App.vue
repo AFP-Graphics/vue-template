@@ -44,12 +44,16 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.params.lang && availableLanguages.indexOf(to.params.lang) === -1) {
+const lang = to.params.lang
+if (lang) {
+  // Check if language is available
+  if (availableLanguages.indexOf(lang) === -1) {
     return next({
       path: '/'
     })
   }
-  next()
+}
+next()
 })
 
 Vue.use(VueRouter)

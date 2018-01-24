@@ -1,5 +1,6 @@
 // Utilitaires
 import Vue from 'vue'
+import 'babel-polyfill'
 
 // Composants
 import App from './App.vue'

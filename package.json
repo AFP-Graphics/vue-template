@@ -7,12 +7,15 @@
     "dev": "parcel index.html --no-cache",
     "watch": "parcel watch index.html --no-cache",
     "build": "parcel build index.html --out-dir build --public-url ./  --no-cache",
-    "clean": "rimraf .cache build dist",
+    "clean": "rimraf .cache build dist node_modules yarn.lock",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "parcel-plugin-archieml": "julesbonnard/parcel-plugin-archieml",
     "pym.js": "^1.3.1",
     "vue-analytics": "^5.8.0"
   },
