@@ -1,0 +1,18 @@
+hello: Please choose a language
+credits: Credits
+back: Back
+
+updateText: Last update: 
+update: 2018-01-24
+
+[authors]
+name: Jules Bonnard
+role: Writer
+twitter: @julesbonnard
+
+name: John Saeki
+role: Editor
+[]
+
+title: Welcome 📦 🚀
+key: value

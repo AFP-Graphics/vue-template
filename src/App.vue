@@ -5,6 +5,9 @@
     </header>
     <router-view></router-view>
     <footer>
+      <router-link to="credits">
+        <i class="UI-icon UI-info" v-if="$router.currentRoute.path !== '/credits'"></i>
+      </router-link>
       <logo />
     </footer>
   </div>
@@ -12,70 +15,17 @@
 
 <script>
 // Utilities
-import Vue from 'vue'
-import VueRouter from 'vue-router'
 import Pym from 'pym.js'
-import VueAnalytics from 'vue-analytics'
 
 // Composants
 import Border from './components/Border'
 import Logo from './components/Logo'
-import LangSelector from './components/LangSelector'
 
-// Story composants
-import TapStory from './components/TapStory'
-
-// ****** Stories
-// Define here the main story composant
-const mainComponent = TapStory
-// Define here the different languages
-const stories = {
-  'fr': import('./stories/fr.txt'),
-  'en': import('./stories/en.txt')
-}
-// ****** End Stories
-const availableLanguages = Object.keys(stories)
-
-const router = new VueRouter({
-  routes: [
-    { 
-      path: '/',
-      component: LangSelector, 
-      props: { availableLanguages }
-    },
-    { 
-      path: '/:lang', 
-      component: mainComponent,
-      props: route => ({
-        availableStories: stories,
-        lang: route.params.lang
-      })
-    }
-  ]
-})
-
-router.beforeEach((to, from, next) => {
-const lang = to.params.lang
-if (lang) {
-  // Check if language is available
-  if (availableLanguages.indexOf(lang) === -1) {
-    return next({
-      path: '/'
-    })
-  }
-}
-next()
-})
-
-Vue.use(VueRouter)
-
-Vue.use(VueAnalytics, {
-  id: 'UA-64253904-2'
-})
+// Styles
+import './assets/sass/icons.scss'
 
 export default {
   name: 'app',
-  router,
   components: { Border, Logo },
   mounted () {
     new Pym.Child({ polling: 500 })
@@ -90,6 +40,11 @@ export default {
 
   footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    i:before {
+      content:"\2139";
+      color: black;
+    }
   }
 </style>

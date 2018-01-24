@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h2>Please choose a language</h2>
+    <h2>{{ $t('hello') }}</h2>
     <ul>
       <li v-for="lang in availableLanguages">
         <router-link :to="lang">{{ lang }}</router-link>
@@ -12,7 +12,11 @@
 <script>
 export default {
   name: 'lang-selector',
-  props: ['availableLanguages']
+  computed: {
+    availableLanguages () {
+      return Object.keys(this.$i18n.messages)
+    }
+  }
 }
 </script>
 

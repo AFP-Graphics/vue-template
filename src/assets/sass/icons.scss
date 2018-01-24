@@ -1,4 +1,5 @@
-.UI-icon{
+i,.UI-icon { // TODO : bug in global classes
+  font-style: normal;
   font-family: "UI essential";
   text-decoration: none;
   text-rendering: optimizeLegibility;
@@ -12,20 +13,7 @@
   font-feature-settings: "liga";
   font-size: 16px;
 }
-.UI-icon{
-  font-family: "UI essential";
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  -webkit-font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  font-size: 16px;
-}
+
 .UI-info:before {content:"\2139";}
 .UI-twitter:before {content:"\f099";}
 .UI-close-alt:before {content:"\2715";}
