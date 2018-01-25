@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import { dateTimeFormats } from './dateTimeFormats'
+import { dateTimeFormats } from '@/utils/dateTimeFormats'
 
 // ****** Stories
 // Define here the different languages

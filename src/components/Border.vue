@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 hr {
   height: 4px;
   border: none;

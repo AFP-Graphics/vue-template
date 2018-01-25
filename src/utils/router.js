@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import { i18n, loadLanguageAsync } from './i18n'
+import { i18n, loadLanguageAsync } from '@/utils/i18n'
 
-import LangSelector from '../components/LangSelector'
-import Credits from '../components/Credits'
-import TapStory from '../components/TapStory'
+import LangSelector from '@/components/LangSelector'
+import Credits from '@/components/Credits'
+import TapStory from '@/components/TapStory'
 
 Vue.use(VueRouter)
 

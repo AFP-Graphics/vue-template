@@ -4,6 +4,9 @@
 
 const path = require('path')
 
+const publicDir = new Date().toISOString().slice(0, 10).replace(/-/g,'')+'-'+process.env.npm_package_name
+const buildsUrl = 'https://graphics.afpforum.com/builds/'
+
 module.exports = {
   dev: {
 
@@ -23,7 +26,7 @@ module.exports = {
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and
     // linting errors and warnings will be shown in the console.
-    useEslint: true,
+    useEslint: false,
     // If true, eslint errors and warnings will also be shown in the error overlay
     // in the browser.
     showEslintErrorsInOverlay: false,
@@ -38,19 +41,19 @@ module.exports = {
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
-    cacheBusting: true,
+    cacheBusting: false,
 
     cssSourceMap: true
   },
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../dist', publicDir, 'index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../dist', publicDir),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: buildsUrl + publicDir + '/',
 
     /**
      * Source Maps
