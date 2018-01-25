@@ -21,9 +21,6 @@ import Pym from 'pym.js'
 import Border from './components/Border'
 import Logo from './components/Logo'
 
-// Styles
-import './assets/sass/icons.scss'
-
 export default {
   name: 'app',
   components: { Border, Logo },

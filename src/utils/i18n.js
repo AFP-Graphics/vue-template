@@ -4,9 +4,15 @@ import { dateTimeFormats } from './dateTimeFormats'
 
 // ****** Stories
 // Define here the different languages
+// const locales = {
+//   'fr': import('../locales/fr.txt'),
+//   'en': import('../locales/en.txt')
+// }
+import fr from '../locales/fr.txt'
+import en from '../locales/en.txt'
 const locales = {
-  'fr': import('../locales/fr.txt'),
-  'en': import('../locales/en.txt')
+  'fr': fr,
+  'en': en
 }
 // ****** End Stories
 
@@ -30,7 +36,8 @@ export function setI18nLanguage (lang) {
 export async function loadLanguageAsync (lang) {
   if (!locales[lang]) return Promise.reject()
   if (!loadedLocales.includes(lang)) {
-    const messages = await locales[lang]
+    // const messages = await locales[lang]
+    const messages = locales[lang]
     i18n.setLocaleMessage(lang, messages)
     loadedLocales.push(lang)
     return setI18nLanguage(lang)
