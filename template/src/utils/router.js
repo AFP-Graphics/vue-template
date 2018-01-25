@@ -5,13 +5,13 @@ import { i18n, loadLanguageAsync } from '@/utils/i18n'
 
 import LangSelector from '@/components/LangSelector'
 import Credits from '@/components/Credits'
-import TapStory from '@/components/TapStory'
+import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
-    { 
+    {
       path: '/',
       component: LangSelector
     },
@@ -19,9 +19,9 @@ const router = new VueRouter({
       path: '/credits',
       component: Credits
     },
-    { 
-      path: '/:lang', 
-      component: TapStory
+    {
+      path: '/:lang',
+      component: HelloWorld
     }
   ]
 })

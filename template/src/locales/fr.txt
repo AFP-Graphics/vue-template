@@ -2,15 +2,11 @@ hello: Choisissez une langue
 credits: Crédits
 back: Retour
 
-updateText: Mise à jour : 
+updateText: Mise à jour :
 update: 2018-01-24
 
 [authors]
-name: Jules Bonnard
-role: Rédacteur
-twitter: @julesbonnard
-
-name: John Saeki
+name: {{ author }}
 []
 
 title: Bienvenue 📦 🚀
