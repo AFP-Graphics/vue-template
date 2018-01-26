@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 
-const { sortDependencies, installDependencies, runLintFix, printMessage } = require('./utils')
+const { sortDependencies, installDependencies, initializeRepository, runLintFix, printMessage } = require('./utils')
 
 const pkg = require('./package.json')
 const templateVersion = pkg.version
@@ -59,6 +59,11 @@ module.exports = {
       type: "confirm",
       message: "Should I run `npm install` for you after the project has been created ?",
       default: true
+    },
+    initRepo: {
+      type: "confirm",
+      message: "Should I initialize a repository for the project ?",
+      default: true
     }
   },
   skipInterpolation: "src/**/*.vue",
@@ -70,19 +75,32 @@ module.exports = {
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
 
-    if (data.autoInstall) {
-      installDependencies(cwd, 'npm', green)
-        .then(() => {
-          return runLintFix(cwd, data, green)
-        })
-        .then(() => {
-          printMessage(data, green)
-        })
-        .catch(e => {
-          console.log(chalk.red('Error:'), e)
-        })
-    } else {
-      printMessage(data, chalk)
-    }
+    Promise.resolve()
+      .then(() => {
+        if (data.autoInstall) {
+          return installDependencies(cwd, 'npm', green)
+            .then(() => {
+              return runLintFix(cwd, data, green)
+            })
+            .catch(e => {
+              console.log(chalk.red('Error:'), e)
+            })
+        } else {
+          return Promise.resolve()
+        }
+      })
+      .then(() => {
+        if (data.initRepo) {
+          return initializeRepository(cwd, 'git', green)
+        } else {
+          return Promise.resolve()
+        }
+      })
+      .then(() => {
+        printMessage(data, green)
+      })
+      .catch(e => {
+        console.log(chalk.red('Error:'), e)
+      })
   }
 }

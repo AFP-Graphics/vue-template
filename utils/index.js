@@ -38,6 +38,32 @@ exports.installDependencies = function installDependencies(
 }
 
 /**
+ * Runs `git init && git add . && git commit -m "Initial commit"` in the project directory
+ * @param {string} cwd Path of the created project directory
+ */
+exports.initializeRepository = function initializeRepository(
+  cwd,
+  executable = 'git',
+  color
+) {
+  console.log(`\n\n# ${color('Initialize repository ...')}`)
+  console.log('# ========================\n')
+  return runCommand(executable, ['init'], {
+    cwd,
+  })
+  .then(_ => {
+    return runCommand(executable, ['add', '.'], {
+      cwd,
+    })
+  })
+  .then(_ => {
+    return runCommand(executable, ['commit', '-m', '"Initial commit"'], {
+      cwd,
+    })
+  })
+}
+
+/**
  * Runs `npm run lint -- --fix` in the project directory
  * @param {string} cwd Path of the created project directory
  * @param {object} data Data from questionnaire
