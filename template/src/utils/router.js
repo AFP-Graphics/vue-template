@@ -7,7 +7,12 @@ import LangSelector from '@/components/LangSelector'
 import Credits from '@/components/Credits'
 
 // Define here your main component
-const HelloWorld = () => import('@/components/HelloWorld')
+{{#if_eq build "basic"}}
+const MainComponent = () => import('@/components/HelloWorld')
+{{/if_eq}}
+{{#if_eq build "tabstory"}}
+const MainComponent = () => import('@/components/TabStory')
+{{/if_eq}}
 
 Vue.use(VueRouter)
 
@@ -19,11 +24,12 @@ const router = new VueRouter({
     },
     {
       path: '/:lang',
-      component: HelloWorld // Define here your main component
+      component: MainComponent
     },
     {
       path: '/:lang/credits',
-      component: Credits
+      component: Credits,
+      name: 'credits'
     },
   ]
 })

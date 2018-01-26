@@ -11,4 +11,13 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+  a {
+    display: block;
+  }
+  img {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+  }
+</style>

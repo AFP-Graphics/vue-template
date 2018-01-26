@@ -44,9 +44,9 @@ module.exports = {
           short: "d3"
         },
         {
-          name: "I want to switch between figures (slideshow)",
-          value: "slideshow",
-          short: "slideshow"
+          name: "I want to switch between figures (tab-story)",
+          value: "tabstory",
+          short: "tabstory"
         }
       ]
     },

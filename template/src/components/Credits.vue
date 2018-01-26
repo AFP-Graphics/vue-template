@@ -1,19 +1,37 @@
 <template>
   <main>
-    <h2>{{ $t('credits') }}</h2>
-    {{ $t('updateText') }} {{ $d(new Date($t('update')), 'short') }}
-    <article v-for="role in roles" :key="role">
-      <h3>{{ role }}</h3>
-      <ul>
-        <li v-for="author in authors" :key="author.name" v-if="author.role === role">
-          <a v-if="author.twitter" :href="`https://twitter.com/${author.twitter}`">
-        {{ author.name }}
+    <h1>{{ $t('credits') }}</h1>
+    <p>
+      {{ $t('updateText') }}
+       {{ $d(new Date($t('update')), 'short') }}
+    </p>
+    <article v-if="Array.isArray(authors)">
+      <ul class="no-bullets">
+        <li v-for="author in authors" :key="author.name">
+          <strong>{{ author.role }}</strong>
+           <a v-if="author.twitter" :href="`https://twitter.com/${author.twitter}`">
+            {{ author.name }}
           </a>
           <span v-else>{{ author.name }}</span>
         </li>
       </ul>
     </article>
-    <a @click="$router.go(-1)" href="#">{{ $t('back') }}</a>
+    <article v-else-if="typeof authors === 'object'">
+      <section v-for="[key, roleAuthors] in Object.entries(authors)" :key="key">
+        <h3>{{ key }}</h3>
+        <ul class="no-bullets">
+          <li v-for="author in roleAuthors" :key="author.name">
+            <a v-if="author.twitter" :href="`https://twitter.com/${author.twitter}`">
+              {{ author.name }}
+            </a>
+            <span v-else>{{ author.name }}</span>
+          </li>
+        </ul>
+      </section>
+    </article>
+    <p>
+      <a @click="$router.go(-1)" href="#">{{ $t('back') }}</a>
+    </p>
   </main>
 </template>
 
@@ -21,14 +39,8 @@
 export default {
   name: 'lang-selector',
   computed: {
-    availableLanguages () {
-      return Object.keys(this.$i18n.messages)
-    },
     authors () {
       return this.$t('authors')
-    },
-    roles () {
-      return [...new Set(this.$t('authors').map(d => d.role))]
     }
   }
 }
