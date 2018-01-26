@@ -10,6 +10,9 @@ module.exports = {
   helpers: {
     template_version() {
       return templateVersion
+    },
+    updated_date() {
+      return new Date().toISOString().slice(0, 10)
     }
   },
   prompts: {
@@ -31,10 +34,10 @@ module.exports = {
     },
     mainComponent: {
       type: "list",
-      message: "Want some help to begin ?",
+      message: "Want to start from a template ?",
       choices: [
         {
-          name: "Let me create from scratch",
+          name: "Let me start from scratch",
           value: "basic",
           short: "basic"
         },

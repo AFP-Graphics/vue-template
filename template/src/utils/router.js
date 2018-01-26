@@ -7,10 +7,10 @@ import LangSelector from '@/components/LangSelector'
 import Credits from '@/components/Credits'
 
 // Define here your main component
-{{#if_eq build "basic"}}
+{{#if_eq mainComponent "basic"}}
 const MainComponent = () => import('@/components/HelloWorld')
 {{/if_eq}}
-{{#if_eq build "tabstory"}}
+{{#if_eq mainComponent "tabstory"}}
 const MainComponent = () => import('@/components/TabStory')
 {{/if_eq}}
 

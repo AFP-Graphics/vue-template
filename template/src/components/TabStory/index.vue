@@ -1,7 +1,6 @@
 <template>
   <main>
-    <!-- <h1>{{ $t('title') }}</h1> -->
-    <h2>{{ $t('subtitle') }}</h2>
+    <h2>{{ $t('headline') }}</h2>
     <horizontal-tabs :tabs="tabs" :current.sync="current"></horizontal-tabs>
     <display-tab :tab="currentTab"></display-tab>
   </main>

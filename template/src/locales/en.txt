@@ -3,25 +3,24 @@ credits: Credits
 back: Back
 
 updateText: Last update:
-update: {{ new Date().toISOString().slice(0, 10) }}
+update: {{ updated_date }}
 
 [authors]
 name: {{ author }}
 role: Writer
 []
 
-{{#if_eq build "basic"}}
+{{#if_eq mainComponent "basic"}}
 title: Welcome 📦 🚀
 key: value
 {{/if_eq}}
-{{#if_eq build "tabstory"}}
-title: Your headline
-subtitle: Your subtitle
+{{#if_eq mainComponent "tabstory"}}
+headline: Your headline
 
 [tabs]
   id: tab1
   name: Tabulation 1
-  image: your-image.png
+  image: 600x400.png
   description: Description 1
   [.events]
     * Tab 1 Event 1
@@ -30,7 +29,7 @@ subtitle: Your subtitle
 
   id: tab2
   name: Tabulation 2
-  image: your-second-image.png
+  image: 600x400.png
   description: Description 2
   [.events]
     * Tab 2 Event 1
@@ -39,7 +38,7 @@ subtitle: Your subtitle
 
   id: tab3
   name: Tabulation 3
-  image: your-third-image.png
+  image: 600x400.png
   description: Description 3
   [.events]
     * Tab 3 Event 1

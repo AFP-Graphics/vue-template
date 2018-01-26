@@ -2,6 +2,9 @@
 
 > {{ description }}
 
+Made with ❤️ by AFP Graphics Team.
+Base on vue-webpack-template v{{ template_version }}
+
 ## Build Setup
 
 ``` bash
