@@ -17,23 +17,22 @@ const router = new VueRouter({
       component: LangSelector
     },
     {
-      path: '/credits',
-      component: Credits
-    },
-    {
       path: '/:lang',
       component: HelloWorld
-    }
+    },
+    {
+      path: '/:lang/credits',
+      component: Credits
+    },
   ]
 })
 
 router.beforeEach((to, from, next) => {
   const lang = to.params.lang || i18n.locale
   return loadLanguageAsync(lang)
-    .then(() => {
-      next()
-    })
-    .catch(() => {
+    .then(() => next())
+    .catch(err => {
+      console.log(err) //eslint-disable-line no-console
       next({
         path: '/'
       })

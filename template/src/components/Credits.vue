@@ -2,7 +2,7 @@
   <main>
     <h2>{{ $t('credits') }}</h2>
     {{ $t('updateText') }} {{ $d(new Date($t('update')), 'short') }}
-    <div v-for="role in roles" :key="role">
+    <article v-for="role in roles" :key="role">
       <h3>{{ role }}</h3>
       <ul>
         <li v-for="author in authors" :key="author.name" v-if="author.role === role">
@@ -12,7 +12,7 @@
           <span v-else>{{ author.name }}</span>
         </li>
       </ul>
-    </div>
+    </article>
     <a @click="$router.go(-1)" href="#">{{ $t('back') }}</a>
   </main>
 </template>

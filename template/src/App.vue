@@ -5,8 +5,8 @@
     </header>
     <router-view></router-view>
     <footer>
-      <router-link to="credits">
-        <i class="UI-icon UI-info" v-if="$router.currentRoute.path !== '/credits'"></i>
+      <router-link :to="`/${this.$i18n.locale}/credits`">
+        <i class="UI-icon UI-info"></i>
       </router-link>
       <logo />
     </footer>
