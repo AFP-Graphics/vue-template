@@ -1,7 +1,7 @@
 html, body {
   font-family: $source_sans_pro;
   color: $font_color;
-  font-size: 1.5em;
+  font-size: 10px;
   line-height: 1.6;
   font-weight: 400;
   -webkit-tap-highlight-color: $black;
@@ -43,15 +43,15 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 p {
   line-height: 2.4rem;
-}
 
-p.condensed {
-  line-height: 1.8rem;
-}
+  &.condensed {
+    line-height: 1.8rem;
+  }
 
-p.small {
-  font-size: 1.3rem;
-  line-height: 1.8rem;
+  &.small {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
 }
 
 em {

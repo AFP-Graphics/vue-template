@@ -1,4 +1,17 @@
+@import 'colors';
+
+// FONTS
+$source_sans_pro: 'Source Sans Pro', sans-serif;
+$roboto_mono: 'RobotoMono', sans-serif;
+
 // BREAKPOINTS
 $break-small  : 'screen and (min-width: 500px)';
 $break-medium : 'screen and (min-width: 600px)';
 $break-large : 'screen and (min-width: 680px)';
+
+$break-small: 'screen and (min-width: 500px)';
+$break-medium: 'screen and (min-width: 600px)';
+$break-large: 'screen and (min-width: 680px)';
+
+// COLORS
+$primary_color: $blue_pacific_4;
