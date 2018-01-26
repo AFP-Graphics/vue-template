@@ -2,10 +2,10 @@
   <main>
     <h2>{{ $t('credits') }}</h2>
     {{ $t('updateText') }} {{ $d(new Date($t('update')), 'short') }}
-    <div v-for="role in roles">
+    <div v-for="role in roles" :key="role">
       <h3>{{ role }}</h3>
       <ul>
-        <li v-for="author in authors" v-if="author.role === role">
+        <li v-for="author in authors" :key="author.name" v-if="author.role === role">
           <a v-if="author.twitter" :href="`https://twitter.com/${author.twitter}`">
         {{ author.name }}
           </a>

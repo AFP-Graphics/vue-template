@@ -2,7 +2,7 @@
   <main>
     <h2>{{ $t('hello') }}</h2>
     <ul>
-      <li v-for="lang in availableLanguages">
+      <li v-for="lang in availableLanguages" :key="lang">
         <router-link :to="lang">{{ lang }}</router-link>
       </li>
     </ul>

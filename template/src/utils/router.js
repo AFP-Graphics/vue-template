@@ -5,7 +5,8 @@ import { i18n, loadLanguageAsync } from '@/utils/i18n'
 
 import LangSelector from '@/components/LangSelector'
 import Credits from '@/components/Credits'
-import HelloWorld from '@/components/HelloWorld'
+
+const HelloWorld = () => import('@/components/HelloWorld')
 
 Vue.use(VueRouter)
 
@@ -29,10 +30,10 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   const lang = to.params.lang || i18n.locale
   return loadLanguageAsync(lang)
-    .then(lang => {
+    .then(() => {
       next()
     })
-    .catch(err => {
+    .catch(() => {
       next({
         path: '/'
       })

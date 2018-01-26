@@ -25,7 +25,7 @@ export default {
   name: 'app',
   components: { Border, Logo },
   mounted () {
-    new Pym.Child({ polling: 500 })
+    new Pym.Child({ polling: 500 }) //eslint-disable-line no-new
   }
 }
 </script>

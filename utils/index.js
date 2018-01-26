@@ -50,11 +50,8 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
       )}`
     )
     console.log('# ========================\n')
-    const args =
-      data.autoInstall === 'npm'
-        ? ['run', 'lint', '--', '--fix']
-        : ['run', 'lint', '--fix']
-    return runCommand(data.autoInstall, args, {
+    const args = ['run', 'lint', '--', '--fix']
+    return runCommand('npm', args, {
       cwd,
     })
   }
