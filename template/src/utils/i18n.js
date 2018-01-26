@@ -21,9 +21,15 @@ export function setI18nLanguage (lang) {
 }
 
 export async function loadLanguageAsync (lang) {
-  if (!locales[lang]) return Promise.reject()
+  if (!locales[lang]) return Promise.reject(new Error('The chosen language is not available'))
   if (!loadedLocales.includes(lang)) {
-    const messages = await locales[lang]
+    let messages
+    try {
+      messages = await locales[lang]
+    } catch (e) {
+      console.error(e) //eslint-disable-line no-console
+      return Promise.reject(new Error('The chosen language cannot be loaded'))
+    }
     i18n.setLocaleMessage(lang, messages)
     loadedLocales.push(lang)
     return setI18nLanguage(lang)
