@@ -1,14 +1,7 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import dateTimeFormats from '@/utils/dateTimeFormats'
-
-// ****** Stories
-// Define here the different languages
-const locales = {
-  'fr': import('@/locales/fr.txt'),
-  'en': import('@/locales/en.txt')
-}
-// ****** End Stories
+import locales from '@/locales'
 
 Vue.use(VueI18n)
 
