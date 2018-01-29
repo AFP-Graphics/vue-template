@@ -20,7 +20,12 @@ module.exports = {
       type: "string",
       required: true,
       message: "Name your project (lowercase and dashes only)",
-      default: "my-awesome-project"
+      default: "my-awesome-project",
+      validate (input) {
+        const regex = /^[a-z0-9-][a-z0-9]+$/
+        if (input.match(regex) !== null) return true
+        return false
+      }
     },
     description: {
       type: "string",
