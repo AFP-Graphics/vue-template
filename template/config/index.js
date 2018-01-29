@@ -4,10 +4,10 @@
 
 const path = require('path')
 
-const publicDir = new Date().toISOString().slice(0, 10).replace(/-/g,'')+'-'+process.env.npm_package_name
-const buildsUrl = 'https://graphics.afpforum.com/builds/'
+const afp = require('./afp')
 
 module.exports = {
+  afp: afp,
   dev: {
 
     // Paths
@@ -49,12 +49,12 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist', publicDir, 'index.html'),
+    index: path.resolve(__dirname, '../dist', afp.publicDir, 'index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist', publicDir),
+    assetsRoot: path.resolve(__dirname, '../dist', afp.publicDir),
     assetsSubDirectory: 'static',
-    assetsPublicPath: buildsUrl + publicDir + '/',
+    assetsPublicPath: afp.buildsUrl + afp.publicDir + '/',
 
     /**
      * Source Maps

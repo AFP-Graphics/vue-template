@@ -1,0 +1,27 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  path:
+    - node_modules
+    - dist
+
+build:
+  image: node:9.4.0
+  stage: build
+  script:
+    - npm install
+    - npm run build
+
+deploy:
+  image: node:9.4.0
+  stage: deploy
+  script:
+    - npm run publish
+  only: master
+  allow_failure: false
+  when: manual
+  environment:
+    name: production
+    url: {{ builds_url }}{{ build_id }}-{{ name }}

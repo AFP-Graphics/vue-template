@@ -20,3 +20,19 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+## Deployment
+
+You need to create a repository on Gitlab, then follow the instructions
+
+``` bash
+# commit changes to Git
+git add .
+git commit -m "your commit"
+
+# add remote origin to your repository
+git remote add origin <url-of-your-repository>
+
+# push changes to Gitlab (updating master branch will allow you to deploy your project)
+git push --set-upstream origin master
+```
