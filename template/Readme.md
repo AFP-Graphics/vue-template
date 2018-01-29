@@ -23,6 +23,8 @@ npm run build --report
 
 ## Deployment
 
+### Automatic
+
 You need to create a repository on Gitlab, then follow the instructions
 
 ``` bash
@@ -35,4 +37,21 @@ git remote add origin <url-of-your-repository>
 
 # push changes to Gitlab (updating master branch will allow you to deploy your project)
 git push --set-upstream origin master
+```
+
+### Manual
+
+You need to create a .env file in the root directory
+
+```
+PUBLIC_SERVER_HOST=
+PUBLIC_SERVER_PASSWORD=
+PUBLIC_SERVER_PATH=
+PUBLIC_SERVER_USERNAME=
+```
+
+Then, 
+
+``` bash
+npm run deploy
 ```
