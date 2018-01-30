@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "description": "A full-featured Webpack setup with hot-reload, scss parsing, css extraction, pym.js, googleAnalytics.",
   "devDependencies": {
-    "vue-cli": "^2.8.1"
+    "vue-cli": "^2.9.2"
   }
 }
