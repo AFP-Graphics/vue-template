@@ -13,6 +13,12 @@ module.exports = {
     },
     updated_date() {
       return new Date().toISOString().slice(0, 10)
+    },
+    builds_url() {
+      return 'https://graphics.afpforum.com/builds/'
+    },
+    build_id() {
+      return new Date().toISOString().slice(0, 10).replace(/-/g,'')
     }
   },
   prompts: {
