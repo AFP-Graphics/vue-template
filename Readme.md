@@ -1,7 +1,13 @@
 # AFP Vue template
 
+## Requirements
+
+- Node
+- Git
+- vue-cli `npm install -g vue-cli`
+
 ## Usage
 
 ```bash
-vue init gitlab:http://infodyn-gitlab.afp.com:news-interactive-templates/vue-template your-project-name
+vue init afp-graphics/vue-template your-project-name
 ```
