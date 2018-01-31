@@ -1,6 +1,6 @@
 <template>
   <article>
-    <p><img :src="require('@/assets/images/'+tab.image)"></p>
+    <p class="lazy-img-container"><img :src="require('@/assets/images/'+tab.image)"></p>
     <h3><big>{{ tab.name }}</big></h3>
     <p class="lead">{{ tab.description }}</p>
     <ul>
@@ -33,13 +33,24 @@ export default {
     }
   }
 
-  p.lead {
-    margin-top: 0px;
-    text-align: center;
+  .lazy-img-container {
+    display: block;
+    position: relative;
+    height: 0;
+    overflow-y: hidden;
+    padding-bottom: 59.4%; //Give image ratio
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
   }
 
-  img {
-    width: 100%;
+  p.lead {
+    text-align: center;
   }
 
   ul {

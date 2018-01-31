@@ -35,6 +35,11 @@ export default {
       text-align: center;
       min-width: 13%;
 
+      &:hover {
+        border: 1px solid lighten($grey_cold_1, 7);
+        background-color: lighten($grey_cold_1, 12);
+      }
+
       &.active {
         text-shadow: 0 -1px 0 darken($primary_color, 10);
         color: white;
