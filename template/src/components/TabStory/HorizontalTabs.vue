@@ -33,7 +33,7 @@ export default {
       border-radius: 0px;
       border: 1px solid transparent;
       text-align: center;
-      min-width: 13%;
+      min-width: 50%;
 
       &:hover {
         border: 1px solid lighten($grey_cold_1, 7);
@@ -46,6 +46,11 @@ export default {
         @include linear-gradient($primary_color, darken($primary_color, 5));
         border: 1px solid darken($primary_color, 5);
       }
+    }
+  }
+  @media #{$break-small} {
+    nav ul li {
+      min-width: auto;
     }
   }
 </style>

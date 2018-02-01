@@ -54,7 +54,7 @@ export default {
   }
 
   ul {
-    padding-left: 5px;
+    padding-left: 25px;
     margin-bottom: 0px;
 
     li:not(:last-child) {
