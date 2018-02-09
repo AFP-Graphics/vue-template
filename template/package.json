@@ -2,7 +2,7 @@
   "name": "{{ name }}",
   "version": "1.0.0",
   "description": "{{ description }}",
-  "main": "{{ author }}",
+  "main": "",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -12,7 +12,7 @@
     {{/lint}}
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "{{ author }}",
   "license": "ISC",
   "dependencies": {
     "d3-collection": "^1.0.4",
