@@ -46,3 +46,109 @@ headline: Your headline
   []
 []
 {{/if_eq}}
+
+{{#if_eq mainComponent "modalgallery"}}
+[gallery]
+  id: 1
+  name: Dog
+  image: dog.jpg
+  thumbnail: thumbnail-dog.jpg
+  title: The dog is amazing
+  description: The dog is in a truck. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+  source: Source: photographer
+
+  id: 2
+  name: Monkey
+  image: monkey.jpg
+  thumbnail: thumbnail-monkey.jpg
+  title: The monkey is amazing
+  description: The monkey is happy. Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+  source: Source: photographer
+
+  id: 3
+  name: Dog
+  image: dog.jpg
+  thumbnail: thumbnail-dog.jpg
+  title: The dog is amazing
+  description: The dog is in a truck. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+  source: Source: photographer
+
+  id: 4
+  name: Monkey
+  image: monkey.jpg
+  thumbnail: thumbnail-monkey.jpg
+  title: The monkey is amazing
+  description: The monkey is happy. Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+
+  source: Source: photographer
+
+  id: 5
+  name: Dog
+  image: dog.jpg
+  thumbnail: thumbnail-dog.jpg
+  title: The dog is amazing
+  description: The dog is in a truck. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+  source: Source: photographer
+
+  id: 6
+  name: Monkey
+  image: monkey.jpg
+  thumbnail: thumbnail-monkey.jpg
+  title: The monkey is amazing
+  description: The monkey is happy. Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+
+  source: Source: photographer
+
+  id: 7
+  name: Dog
+  image: dog.jpg
+  thumbnail: thumbnail-dog.jpg
+  title: The dog is amazing
+  description: The dog is in a truck. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+  source: Source: photographer
+
+  id: 8
+  name: Monkey
+  image: monkey.jpg
+  thumbnail: thumbnail-monkey.jpg
+  title: The monkey is amazing
+  description: The monkey is happy. Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+
+  source: Source: photographer
+
+  id: 9
+  name: Dog
+  image: dog.jpg
+  thumbnail: thumbnail-dog.jpg
+  title: The dog is amazing
+  description: The dog is in a truck. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+  source: Source: photographer
+
+  id: 10
+  name: Monkey
+  image: monkey.jpg
+  thumbnail: thumbnail-monkey.jpg
+  title: The monkey is amazing
+  description: The monkey is happy. Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+
+  source: Source: photographer
+
+  id: 11
+  name: Dog
+  image: dog.jpg
+  thumbnail: thumbnail-dog.jpg
+  title: The dog is amazing
+  description: The dog is in a truck. Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.
+  source: Source: photographer
+
+  id: 12
+  name: Monkey
+  image: monkey.jpg
+  thumbnail: thumbnail-monkey.jpg
+  title: The monkey is amazing
+  description: The monkey is happy. Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+
+  source: Source: photographer
+[]
+{{/if_eq}}

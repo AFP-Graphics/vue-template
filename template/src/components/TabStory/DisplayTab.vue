@@ -1,7 +1,7 @@
 <template>
   <article>
-    <p class="lazy-img-container"><img :src="require('@/assets/images/'+tab.image)"></p>
-    <h3><big>{{ tab.name }}</big></h3>
+    <p class="lazy-img-container"><img :src="require('@/assets/img/'+tab.image)"></p>
+    <h3><span class="big">{{ tab.name }}</span></h3>
     <p class="lead">{{ tab.description }}</p>
     <ul>
       <li v-for="(event,i) in tab.events" :key="i">{{ event }}</li>
@@ -18,6 +18,10 @@ export default {
 
 <style lang="scss" scoped>
   @import '~@/assets/sass/variables.scss';
+
+  .big {
+    font-weight: bold;
+  }
 
   h3 {
     text-align: center;

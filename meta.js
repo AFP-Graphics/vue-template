@@ -61,6 +61,11 @@ module.exports = {
           name: "I want to switch between figures (tab-story)",
           value: "tabstory",
           short: "tabstory"
+        },
+        {
+          name: "I want a gallery of images that I can open (modal-gallery)",
+          value: "modalgallery",
+          short: "modalgallery"
         }
       ]
     },
