@@ -1,7 +1,7 @@
 <template>
   <article>
-    <p><img :src="require('@/assets/images/'+tab.image)"></p>
-    <h3><big>{{ tab.name }}</big></h3>
+    <p class="lazy-img-container"><img :src="require('@/assets/img/'+tab.image)"></p>
+    <h3><span class="big">{{ tab.name }}</span></h3>
     <p class="lead">{{ tab.description }}</p>
     <ul>
       <li v-for="(event,i) in tab.events" :key="i">{{ event }}</li>
@@ -19,6 +19,10 @@ export default {
 <style lang="scss" scoped>
   @import '~@/assets/sass/variables.scss';
 
+  .big {
+    font-weight: bold;
+  }
+
   h3 {
     text-align: center;
     margin-bottom: 0px;
@@ -33,17 +37,28 @@ export default {
     }
   }
 
+  .lazy-img-container {
+    display: block;
+    position: relative;
+    height: 0;
+    overflow-y: hidden;
+    padding-bottom: 59.4%; //Give image ratio
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
   p.lead {
-    margin-top: 0px;
     text-align: center;
   }
 
-  img {
-    width: 100%;
-  }
-
   ul {
-    padding-left: 5px;
+    padding-left: 25px;
     margin-bottom: 0px;
 
     li:not(:last-child) {

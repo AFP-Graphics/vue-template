@@ -13,6 +13,12 @@ const MainComponent = () => import('@/components/HelloWorld')
 {{#if_eq mainComponent "tabstory"}}
 const MainComponent = () => import('@/components/TabStory')
 {{/if_eq}}
+{{#if_eq mainComponent "modalgallery"}}
+const MainComponent = () => import('@/components/ModalGallery')
+{{/if_eq}}
+{{#if_eq mainComponent "calculator"}}
+const MainComponent = () => import('@/components/Calculator')
+{{/if_eq}}
 
 Vue.use(VueRouter)
 
