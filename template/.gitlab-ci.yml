@@ -18,7 +18,7 @@ deploy:
   image: node:9.4.0
   stage: deploy
   script:
-    - npm run publish
+    - npm run deploy
   only: 
     - master
   allow_failure: false
