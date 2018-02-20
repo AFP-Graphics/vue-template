@@ -48,6 +48,8 @@ headline: Your headline
 {{/if_eq}}
 
 {{#if_eq mainComponent "modalgallery"}}
+headline: Your headline
+subhead: Your subhead
 [gallery]
   id: 1
   name: Dog

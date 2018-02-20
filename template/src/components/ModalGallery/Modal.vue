@@ -3,7 +3,7 @@
     <div class="modal-mask" v-on:click="closeModal"></div>
     <div class="modal-container">
       <div class="close" :class="modal.closeColour" v-on:click="closeModal">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.46 15.46"><path d="M14.7,15.46l-7-7-7,7L0,14.7l7-7-7-7L.76,0l7,7,7-7,.76.76-7,7,7,7Z"/></svg>
+        <i class="UI-icon UI-close-alt"></i>
       </div>
       <figure v-if="modal.image" class="modal-image-wrapper">
         <img class="modal-image" :src="getPhoto(modal.image)" alt="modal image">
@@ -71,17 +71,17 @@ export default {
         padding: 15px;
         z-index: 2;
 
-        &>svg {
-          width: 20px;
-          fill: $black;
+        &>i {
+          font-size: 20px;
+          color: $black;
         }
 
-        &.black svg {
-          fill: $black;
+        &.black i {
+          color: $black;
         }
 
-        &.white svg {
-          fill: $white;
+        &.white i {
+          color: $white;
         }
 
         &:hover {

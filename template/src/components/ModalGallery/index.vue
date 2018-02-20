@@ -52,8 +52,6 @@ export default {
     openModal (element) {
       this.modal.image = element.image
       this.modal.caption = element.caption
-      this.modal.image2 = element.image2
-      this.modal.caption2 = element.caption2
       this.modal.description = element.description
       this.modal.title = element.title
       this.modal.subtitle = element.subtitle
