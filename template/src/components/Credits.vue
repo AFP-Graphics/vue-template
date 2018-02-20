@@ -3,7 +3,7 @@
     <h1>{{ $t('credits') }}</h1>
     <p>
       {{ $t('updateText') }}
-       {{ $d(new Date($t('update')), 'short') }}
+      {{ $d(new Date($t('update')), 'short') }}
     </p>
     <article v-if="Array.isArray(authors)">
       <ul class="no-bullets">
@@ -11,13 +11,15 @@
           <strong>{{ role.key }}</strong> :
           <span v-for="(author,i) in role.values" :key="author.name">
             <a v-if="author.twitter" :href="`https://twitter.com/${author.twitter}`" target="_blank">
-            {{ author.name }}
+              {{ author.name }}
             </a>
             <span v-else>{{ author.name }}</span>
             {{ '' | addComma(i, role.values.length) }}
           </span>
         </li>
       </ul>
+      <p class="title">{{ $t('methodotitle')}}</p>
+      <p>{{ $t('methodo')}}</p>
     </article>
     <p>
       <a @click="$router.go(-1)" href="#">{{ $t('back') }}</a>
@@ -51,4 +53,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .title {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 2px;
+  }
+</style>

@@ -8,6 +8,7 @@
       <router-link :to="`/${this.$i18n.locale}/credits`">
         <i class="UI-icon UI-info" v-if="$route.name !== 'credits'"></i>
       </router-link>
+      <div class="source">{{ $t('source') }}</div>
       <logo />
     </footer>
   </div>
@@ -37,8 +38,13 @@ export default {
 
   footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+
+    .source {
+      margin: 0 12px;
+      flex: 1;
+    }
 
     i:before {
       content:"\2139";

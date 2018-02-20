@@ -174,3 +174,29 @@ subhead: Your subhead
   closeColour: black
 []
 {{/if_eq}}
+
+{{#if_eq mainComponent "calculator"}}
+title: Your headline
+intro: Your intro
+
+nodata: The data you register is not saved
+
+value1.title: Value 1
+value1.detail: (just for testing)
+
+value2.title: Value 2
+value2.detail: (just for testing)
+
+result.title: The sum
+
+below500: Is below 500
+above500: Is above 500
+
+methodotitle: Methodology :
+methodo: Your methodology
+source: Sources: Your sources
+{{/if_eq}}
+
+methodotitle: Methodology :
+methodo: Your methodology
+source: Sources: Your sources

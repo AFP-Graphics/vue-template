@@ -53,11 +53,6 @@ module.exports = {
           short: "basic"
         },
         {
-          name: "I want to draw charts and maps (D3)",
-          value: "d3",
-          short: "d3"
-        },
-        {
           name: "I want to switch between figures (tab-story)",
           value: "tabstory",
           short: "tabstory"
@@ -66,6 +61,11 @@ module.exports = {
           name: "I want a gallery of images that I can open (modal-gallery)",
           value: "modalgallery",
           short: "modalgallery"
+        },
+        {
+          name: "I want to explain an algorithm with user data (calculator)",
+          value: "calculator",
+          short: "calculator"
         }
       ]
     },
