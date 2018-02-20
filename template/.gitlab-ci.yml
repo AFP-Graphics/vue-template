@@ -3,7 +3,7 @@ stages:
   - deploy
 
 cache:
-  path:
+  paths:
     - node_modules
     - dist
 
@@ -19,7 +19,8 @@ deploy:
   stage: deploy
   script:
     - npm run publish
-  only: master
+  only: 
+    - master
   allow_failure: false
   when: manual
   environment:
