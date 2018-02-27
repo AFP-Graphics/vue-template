@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main :style="{ minHeight: minHeight }">
     <h2>{{ $t('headline') }}</h2> <!-- $t Check /src/locales/en.txt -->
     <h3>{{ $t('subhead') }}</h3>
 
@@ -10,7 +10,7 @@
     </div>
 
     <transition name="fade">
-      <modal v-if="showModal" :modal="modal" v-on:closeModal="closeModal"></modal>
+      <modal v-if="showModal" :modal="modal" v-on:closeModal="closeModal" v-on:setMinHeight="setMinHeight"></modal>
     </transition>
   </main>
 </template>
@@ -26,6 +26,7 @@ export default {
   data () {
     return {
       showModal: false,
+      minHeight: 0,
       modal: {
         image: '',
         caption: '',
@@ -63,6 +64,11 @@ export default {
 
     closeModal () {
       this.showModal = false
+      this.setMinHeight(0)
+    },
+
+    setMinHeight (val) {
+      this.minHeight = val + 'px'
     }
   }
 }
