@@ -1,12 +1,12 @@
 <template>
   <div class="modal">
     <div class="modal-mask" v-on:click="closeModal"></div>
-    <div class="modal-container">
+    <div ref="modal" class="modal-container">
       <div class="close" :class="modal.closeColour" v-on:click="closeModal">
         <i class="UI-icon UI-close-alt"></i>
       </div>
       <figure v-if="modal.image" class="modal-image-wrapper">
-        <img class="modal-image" :src="getPhoto(modal.image)" alt="modal image">
+        <img class="modal-image" :src="getPhoto(modal.image)" alt="modal image" @load="onLoad">
         <figcaption v-if="modal.caption" class="caption">{{ modal.caption }}</figcaption>
       </figure>
 
@@ -26,6 +26,12 @@ export default {
 
   props: ['modal'],
 
+  mounted () {
+    this.$nextTick(() => {
+      this.setAppMinHeight(this.$refs.modal.offsetHeight)
+    })
+  },
+
   methods: {
     getPhoto (fileName) {
       return require.context('../../assets/img/modalgallery')('./' + fileName)
@@ -33,6 +39,14 @@ export default {
 
     closeModal () {
       this.$emit('closeModal')
+    },
+
+    onLoad () {
+      this.setAppMinHeight(this.$refs.modal.offsetHeight)
+    },
+
+    setAppMinHeight (val) {
+      this.$emit('setMinHeight', val)
     }
   }
 }
