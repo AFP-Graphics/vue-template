@@ -29,7 +29,7 @@ export async function loadLanguageAsync (lang) {
     try {
       messages = await locales[lang]
     } catch (e) {
-      console.error(e) //eslint-disable-line no-console
+      console.error(e) // eslint-disable-line no-console
       return Promise.reject(new Error('The chosen language cannot be loaded'))
     }
     i18n.setLocaleMessage(lang, messages)

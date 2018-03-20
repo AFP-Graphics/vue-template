@@ -3,30 +3,49 @@
     <h1>{{ $t('title') }}</h1>
     <p>{{ $t('intro') }}</p>
 
-    <form @submit.prevent autocomplete="off">
+    <form
+      autocomplete="off"
+      @submit.prevent>
       <div id="sliders">
-         <div class="form-group value1">
+        <div class="form-group value1">
           <h4>{{ $t('value1.title') }}</h4>
           <h5>{{ $t('value1.detail') }}</h5>
           <span class="value">{{ $n(value1, lang) }}</span>
-          <range-slider v-model="value1" scaleType="linear" :scaleDomain="[0, 1000]" :ticks="ticks" :step="1"></range-slider>
+          <range-slider
+            v-model="value1"
+            :scale-domain="[0, 1000]"
+            :ticks="ticks"
+            :step="1"
+            scale-type="linear"/>
         </div>
         <div class="form-group value2">
           <h4>{{ $t('value2.title') }}</h4>
           <h5>{{ $t('value2.detail') }}</h5>
           <span class="value">{{ $n(value2, lang) }}</span>
-          <range-slider v-model="value2" scaleType="linear" :scaleDomain="[0, 1000]" :ticks="ticks" :step="1"></range-slider>
+          <range-slider
+            v-model="value2"
+            :scale-domain="[0, 1000]"
+            :ticks="ticks"
+            :step="1"
+            scale-type="linear"/>
         </div>
       </div>
-      <div id="results" :class="currentStepName">
+      <div
+        id="results"
+        :class="currentStepName">
         <div class="form-group result">
-            <h4>{{ $t('result.title') }}</h4>
-            <h5>{{ $t(currentStepName) }}</h5>
-            <span class="value">{{ $n(result, lang) }}</span>
+          <h4>{{ $t('result.title') }}</h4>
+          <h5>{{ $t(currentStepName) }}</h5>
+          <span class="value">{{ $n(result, lang) }}</span>
         </div>
       </div>
     </form>
-    <p class="small"><img src="@/assets/img/lock.svg" height="12" width="10"> {{ $t('nodata') }}</p>
+    <p class="small">
+      <img
+        src="@/assets/img/lock.svg"
+        height="12"
+        width="10"> {{ $t('nodata') }}
+    </p>
   </main>
 </template>
 
@@ -35,7 +54,7 @@ import RangeSlider from './RangeSlider'
 import { scaleThreshold } from 'd3-scale'
 
 export default {
-  name: 'calculator',
+  name: 'Calculator',
   components: { RangeSlider },
   data () {
     return {

@@ -1,10 +1,10 @@
 <template>
-  <hr />
+  <hr>
 </template>
 
 <script>
 export default {
-  name: 'border'
+  name: 'Border'
 }
 </script>
 

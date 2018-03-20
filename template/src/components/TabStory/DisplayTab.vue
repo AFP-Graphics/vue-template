@@ -1,18 +1,29 @@
 <template>
   <article>
-    <p class="lazy-img-container"><img :src="require('@/assets/img/'+tab.image)"></p>
-    <h3><span class="big">{{ tab.name }}</span></h3>
+    <p class="lazy-img-container">
+      <img :src="require('@/assets/img/'+tab.image)">
+    </p>
+    <h3>
+      <span class="big">{{ tab.name }}</span>
+    </h3>
     <p class="lead">{{ tab.description }}</p>
     <ul>
-      <li v-for="(event,i) in tab.events" :key="i">{{ event }}</li>
+      <li
+        v-for="(event,i) in tab.events"
+        :key="i">{{ event }}</li>
     </ul>
   </article>
 </template>
 
 <script>
 export default {
-  name: 'display-tab',
-  props: ['tab']
+  name: 'DisplayTab',
+  props: {
+    tab: {
+      type: Object,
+      default: () => {}
+    }
+  }
 }
 </script>
 

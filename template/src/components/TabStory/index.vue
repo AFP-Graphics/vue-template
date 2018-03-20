@@ -1,10 +1,14 @@
 <template>
   <main>
     <h2>{{ $t('headline') }}</h2>
-    <horizontal-tabs :tabs="tabs" :current.sync="current"></horizontal-tabs>
+    <horizontal-tabs
+      :tabs="tabs"
+      :current.sync="current" />
     <div :class="`tab-story-container ${direction}`">
       <transition name="slide">
-        <display-tab :tab="currentTab" :key="current"></display-tab>
+        <display-tab
+          :tab="currentTab"
+          :key="current" />
       </transition>
     </div>
   </main>
@@ -15,7 +19,7 @@ import HorizontalTabs from '@/components/TabStory/HorizontalTabs'
 import DisplayTab from '@/components/TabStory/DisplayTab'
 
 export default {
-  name: 'tab-story',
+  name: 'TabStory',
   components: {
     HorizontalTabs,
     DisplayTab
@@ -25,17 +29,17 @@ export default {
       current: 0
     }
   },
-  watch: {
-    current (newVal, oldVal) {
-      this.direction = newVal > oldVal ? 'right' : 'left'
-    }
-  },
   computed: {
     tabs () {
       return this.$t('tabs')
     },
     currentTab () {
       return this.tabs[this.current]
+    }
+  },
+  watch: {
+    current (newVal, oldVal) {
+      this.direction = newVal > oldVal ? 'right' : 'left'
     }
   }
 }

@@ -1,4 +1,13 @@
 {
-  "presets": ["env", "stage-3"],
+  "presets": [
+    ["env", {
+      "useBuiltIns": true
+    }]
+  ],
+  "env": {
+    "production": {
+      "presets": ["minify"]
+    }
+  },
   "plugins": ["dynamic-import-node"]
 }
