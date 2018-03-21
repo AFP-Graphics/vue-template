@@ -9,5 +9,5 @@
       "presets": ["minify"]
     }
   },
-  "plugins": ["dynamic-import-node"]
+  "plugins": ["dynamic-import-node", "syntax-object-rest-spread"]
 }
