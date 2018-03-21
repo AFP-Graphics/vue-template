@@ -1,20 +1,43 @@
 <template>
   <div class="modal">
-    <div class="modal-mask" v-on:click="closeModal"></div>
-    <div ref="modal" class="modal-container">
-      <div class="close" :class="modal.closeColour" v-on:click="closeModal">
-        <i class="UI-icon UI-close-alt"></i>
+    <div
+      class="modal-mask"
+      @click="closeModal" />
+    <div
+      ref="modal"
+      class="modal-container">
+      <div
+        :class="modal.closeColour"
+        class="close"
+        @click="closeModal">
+        <i class="UI-icon UI-close-alt" />
       </div>
-      <figure v-if="modal.image" class="modal-image-wrapper">
-        <img class="modal-image" :src="getPhoto(modal.image)" alt="modal image" @load="onLoad">
-        <figcaption v-if="modal.caption" class="caption">{{ modal.caption }}</figcaption>
+      <figure
+        v-if="modal.image"
+        class="modal-image-wrapper">
+        <img
+          :src="getPhoto(modal.image)"
+          class="modal-image"
+          alt="modal image"
+          @load="onLoad">
+        <figcaption
+          v-if="modal.caption"
+          class="caption">{{ modal.caption }}</figcaption>
       </figure>
 
       <div class="text">
-        <h4 class="title" v-if="modal.title">{{ modal.title }}</h4>
-        <h5 class="subtitle" v-if="modal.subtitle">{{ modal.subtitle }}</h5>
-        <p class="description" v-if="modal.description">{{ modal.description }}</p>
-        <p class="source" v-if="modal.source">{{ modal.source }}</p>
+        <h4
+          v-if="modal.title"
+          class="title">{{ modal.title }}</h4>
+        <h5
+          v-if="modal.subtitle"
+          class="subtitle">{{ modal.subtitle }}</h5>
+        <p
+          v-if="modal.description"
+          class="description">{{ modal.description }}</p>
+        <p
+          v-if="modal.source"
+          class="source">{{ modal.source }}</p>
       </div>
     </div>
   </div>
@@ -22,9 +45,14 @@
 
 <script>
 export default {
-  name: 'modal',
+  name: 'Modal',
 
-  props: ['modal'],
+  props: {
+    modal: {
+      type: Object,
+      default: () => {}
+    }
+  },
 
   mounted () {
     this.$nextTick(() => {

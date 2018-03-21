@@ -7,10 +7,17 @@
     </p>
     <article v-if="Array.isArray(authors)">
       <ul class="no-bullets">
-        <li v-for="role in authorsByRole" :key="role.key">
+        <li
+          v-for="role in authorsByRole"
+          :key="role.key">
           <strong>{{ role.key }}</strong> :
-          <span v-for="(author,i) in role.values" :key="author.name">
-            <a v-if="author.twitter" :href="`https://twitter.com/${author.twitter}`" target="_blank">
+          <span
+            v-for="(author,i) in role.values"
+            :key="author.name">
+            <a
+              v-if="author.twitter"
+              :href="`https://twitter.com/${author.twitter}`"
+              target="_blank">
               {{ author.name }}
             </a>
             <span v-else>{{ author.name }}</span>
@@ -18,11 +25,11 @@
           </span>
         </li>
       </ul>
-      <p class="title">{{ $t('methodotitle')}}</p>
-      <p>{{ $t('methodo')}}</p>
     </article>
     <p>
-      <a @click="$router.go(-1)" href="#">{{ $t('back') }}</a>
+      <a
+        href="#"
+        @click="$router.go(-1)">{{ $t('back') }}</a>
     </p>
   </main>
 </template>
@@ -31,7 +38,7 @@
 import { nest } from 'd3-collection'
 
 export default {
-  name: 'credits',
+  name: 'Credits',
   filters: {
     addComma (name, i, length) {
       if (length > 0 && i < length - 1) {

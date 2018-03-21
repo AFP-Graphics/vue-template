@@ -4,13 +4,24 @@
     <h3>{{ $t('subhead') }}</h3>
 
     <div class="gallery">
-      <div v-for="(element, index) in gallery" class="gallery-element" :key="index" v-on:click="openModal(element)">
-        <img class="thumbnail" :src="getPhoto(element.thumbnail)" alt="">
+      <div
+        v-for="(element, index) in gallery"
+        :key="index"
+        class="gallery-element"
+        @click="openModal(element)">
+        <img
+          :src="getPhoto(element.thumbnail)"
+          class="thumbnail"
+          alt="">
       </div>
     </div>
 
     <transition name="fade">
-      <modal v-if="showModal" :modal="modal" v-on:closeModal="closeModal" v-on:setMinHeight="setMinHeight"></modal>
+      <modal
+        v-if="showModal"
+        :modal="modal"
+        @closeModal="closeModal"
+        @setMinHeight="setMinHeight" />
     </transition>
   </main>
 </template>
@@ -19,7 +30,7 @@
 import Modal from './Modal'
 
 export default {
-  name: 'modal-gallery',
+  name: 'ModalGallery',
 
   components: { Modal },
 

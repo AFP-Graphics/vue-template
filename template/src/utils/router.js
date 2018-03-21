@@ -36,7 +36,7 @@ const router = new VueRouter({
       path: '/:lang/credits',
       component: Credits,
       name: 'credits'
-    },
+    }
   ]
 })
 
@@ -45,7 +45,7 @@ router.beforeEach((to, from, next) => {
   return loadLanguageAsync(lang)
     .then(() => next())
     .catch(err => {
-      console.log(err) //eslint-disable-line no-console
+      console.log(err) // eslint-disable-line no-console
       next({
         path: '/'
       })

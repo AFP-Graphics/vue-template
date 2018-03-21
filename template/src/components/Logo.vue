@@ -1,12 +1,16 @@
 <template>
-  <a href="http://u.afp.com/interactive-graphics" target="_blank">
-    <img src="../assets/svg/afp_logo.svg" alt="Logo AFP">
+  <a
+    href="http://u.afp.com/interactive-graphics"
+    target="_blank">
+    <img
+      src="../assets/svg/afp_logo.svg"
+      alt="Logo AFP">
   </a>
 </template>
 
 <script>
 export default {
-  name: 'logo'
+  name: 'Logo'
 }
 </script>
 
