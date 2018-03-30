@@ -1,14 +1,14 @@
 html, body {
   font-family: $source_sans_pro;
   color: $font_color;
-  font-size: 10px;
+  font-size: 62.5%;
   line-height: 1.6;
   font-weight: 400;
   -webkit-tap-highlight-color: $black;
   -webkit-tap-highlight-color: transparent; /* For some Androids */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
-}   
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
