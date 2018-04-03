@@ -12,8 +12,12 @@
   -webkit-font-smoothing: anti-aliased;
 }
 
-html, body {
+body {
   background-color: $white;
-  margin: auto;
+  margin: 0;
+}
+
+#app {
   max-width: 990px;
+  margin: 0 auto;
 }
