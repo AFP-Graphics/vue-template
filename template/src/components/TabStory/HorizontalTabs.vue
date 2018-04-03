@@ -1,7 +1,11 @@
 <template>
   <nav>
     <ul>
-      <li v-for="(tab,i) in tabs" :key="tab.id" :class="{active: i === current}" @click="$emit('update:current', i)">
+      <li
+        v-for="(tab,i) in tabs"
+        :key="tab.id"
+        :class="{active: i === current}"
+        @click="$emit('update:current', i)">
         {{ tab.id }}
       </li>
     </ul>
@@ -10,8 +14,17 @@
 
 <script>
 export default {
-  name: 'horizontal-tabs',
-  props: ['tabs', 'current']
+  name: 'HorizontalTabs',
+  props: {
+    tabs: {
+      type: Array,
+      default: () => []
+    },
+    current: {
+      type: Number,
+      default: 0
+    }
+  }
 }
 </script>
 
@@ -24,7 +37,7 @@ export default {
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
-    font-size: 1.4rem;
+    font-size: $f14;
     margin-bottom: 0px;
 
     li {

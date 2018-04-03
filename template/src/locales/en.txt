@@ -191,12 +191,6 @@ result.title: The sum
 
 below500: Is below 500
 above500: Is above 500
-
-methodotitle: Methodology :
-methodo: Your methodology
-source: Sources: Your sources
 {{/if_eq}}
 
-methodotitle: Methodology :
-methodo: Your methodology
 source: Sources: Your sources

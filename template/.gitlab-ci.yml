@@ -8,18 +8,18 @@ cache:
     - dist
 
 build:
-  image: node:9.4.0
+  image: node:8.11.1
   stage: build
   script:
     - npm install
     - npm run build
 
 deploy:
-  image: node:9.4.0
+  image: node:8.11.1
   stage: deploy
   script:
     - npm run deploy
-  only: 
+  only:
     - master
   allow_failure: false
   when: manual

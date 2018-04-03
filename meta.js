@@ -69,11 +69,6 @@ module.exports = {
         }
       ]
     },
-    lint: {
-      type: "confirm",
-      message: "Want to lint your code ?",
-      default: true
-    },
     autoInstall: {
       type: "confirm",
       message: "Should I run `npm install` for you after the project has been created ?",

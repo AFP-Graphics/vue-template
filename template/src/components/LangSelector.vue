@@ -2,7 +2,9 @@
   <main>
     <h2>{{ $t('hello') }}</h2>
     <ul>
-      <li v-for="lang in availableLanguages" :key="lang">
+      <li
+        v-for="lang in availableLanguages"
+        :key="lang">
         <router-link :to="lang">{{ lang }}</router-link>
       </li>
     </ul>
@@ -11,7 +13,7 @@
 
 <script>
 export default {
-  name: 'lang-selector',
+  name: 'LangSelector',
   computed: {
     availableLanguages () {
       return Object.keys(this.$i18n.messages)

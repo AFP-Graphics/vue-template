@@ -1,9 +1,21 @@
 <template>
-  <div class="slider" ref="slider" v-resize:debounce="onResize">
-    <ul class="ticks" v-if="ticks.length > 0">
-      <li class="tick" v-for="tick in ticks" :key="tick.value" :style="{left: `${scale(tick.value)}px`}">{{ tick.label }}</li>
+  <div
+    v-resize:debounce="onResize"
+    ref="slider"
+    class="slider">
+    <ul
+      v-if="ticks.length > 0"
+      class="ticks">
+      <li
+        v-for="tick in ticks"
+        :key="tick.value"
+        :style="{left: `${scale(tick.value)}px`}"
+        class="tick">{{ tick.label }}</li>
     </ul>
-    <div :class="{ dragger: true, isDragging }" ref="dragger" :style="{left: `${xDraggerPos}px`}"></div>
+    <div
+      ref="dragger"
+      :class="{ dragger: true, isDragging }"
+      :style="{left: `${xDraggerPos}px`}" />
   </div>
 </template>
 
@@ -24,7 +36,10 @@ const roundToNearest = (value, multiple, roundingFunction) => {
 }
 
 export default {
-  name: 'range-slider',
+  name: 'RangeSlider',
+  directives: {
+    resize
+  },
   model: {
     prop: 'value',
     event: 'change'
@@ -50,9 +65,6 @@ export default {
       type: Number,
       default: 1
     }
-  },
-  directives: {
-    resize
   },
   data () {
     return {
