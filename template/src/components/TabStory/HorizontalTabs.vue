@@ -37,7 +37,7 @@ export default {
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
-    font-size: 1.4rem;
+    font-size: $f14;
     margin-bottom: 0px;
 
     li {

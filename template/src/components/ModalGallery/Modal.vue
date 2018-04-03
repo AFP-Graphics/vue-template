@@ -147,7 +147,7 @@ export default {
           width: 100%;
           bottom: 0;
           padding: 10px 10px 0 10px;
-          font-size: 1.3rem;
+          font-size: $f13;
           margin: 0;
           font-style: italic;
           text-align: center;
@@ -158,17 +158,17 @@ export default {
         padding: 14px 24px 24px;
 
         .title {
-          font-size: 2rem;
+          font-size: $f20;
           text-transform: uppercase;
         }
 
         .description {
-          font-size: 1.5rem;
+          font-size: $f15;
           margin-top: 20px;
         }
 
         .source {
-          font-size: 1.3rem;
+          font-size: $f13;
           margin: 0;
           font-weight: bold;
         }

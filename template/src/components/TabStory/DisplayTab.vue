@@ -42,8 +42,8 @@ export default {
     big {
       display: inline-block;
       margin: auto;
-      font-size: 2.4rem;
-      line-height: 2.7rem;
+      font-size: $f24;
+      line-height: $f27;
       letter-spacing: 0.05rem;
     }
   }

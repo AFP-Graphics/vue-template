@@ -128,19 +128,19 @@ export default {
   h5 {
     font-style: italic;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: $f13;
     color: #442a13;
     text-shadow: 0 -1px 0 rgba($white, 0.15);
-    margin-bottom: 1.3rem;
+    margin-bottom: $f13;
   }
 
   span.value {
-    font-size: 3rem;
+    font-size: $f30;
     font-family: $roboto_mono;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
     margin-bottom: 12px;
     margin-left: 6px;
-    line-height: 2rem;
+    line-height: $f20;
   }
 
   .form-group {
@@ -189,11 +189,11 @@ export default {
     justify-content: space-between;
 
     h4 {
-      font-size: 1.4rem;
+      font-size: $f14;
     }
 
     span.currency {
-      font-size: 2rem;
+      font-size: $f20;
     }
 
     .form-group {

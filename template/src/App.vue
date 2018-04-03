@@ -38,6 +38,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "~@/assets/sass/variables";
+
   main, footer {
     padding: 12px 16px 18px 12px;
   }
@@ -48,14 +50,17 @@ export default {
     align-items: center;
 
     .source {
-      font-size: 1.2em;
-      margin: 0 12px;
+      font-size: $f12;
       flex: 1;
     }
 
     i:before {
       content:"\2139";
       color: black;
+    }
+
+    .UI-info {
+      margin-right: 6px;
     }
   }
 </style>
