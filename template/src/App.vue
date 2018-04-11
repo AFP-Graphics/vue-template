@@ -22,6 +22,7 @@
 
 <script>
 // Utilities
+import 'normalize.css'
 import Pym from 'pym.js'
 
 // Composants
@@ -30,7 +31,9 @@ import Logo from '@/components/Logo'
 
 export default {
   name: 'App',
+
   components: { Border, Logo },
+
   mounted () {
     new Pym.Child({ polling: 500 }) // eslint-disable-line no-new
   }
@@ -38,7 +41,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "~@/assets/sass/variables";
+  @import "~@/assets/styles/main";
+  @import "~@/assets/styles/variables";
 
   main, footer {
     padding: 12px 16px 18px 12px;

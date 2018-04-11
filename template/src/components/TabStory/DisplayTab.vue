@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '~@/assets/sass/variables.scss';
+  @import '~@/assets/styles/variables';
 
   .big {
     font-weight: bold;

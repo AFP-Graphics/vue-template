@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "~@/assets/sass/variables";
+  @import "~@/assets/styles/variables";
   .title {
     font-weight: bold;
     font-size: $f16;

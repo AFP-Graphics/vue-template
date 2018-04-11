@@ -119,7 +119,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/sass/variables.scss';
+@import '~@/assets/styles/variables';
 
 #sliders, #results {
   display: flex;
@@ -204,7 +204,7 @@ export default {
 </style>
 
 <style lang="scss">
-  @import '~@/assets/sass/variables.scss';
+  @import '~@/assets/styles/variables';
   .slider {
     border-color: rgba(255, 255, 255, 0.4) !important;
   }
