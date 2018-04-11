@@ -1,0 +1,10 @@
+.ar{
+  unicode-bidi:bidi-override; direction: rtl;
+
+  .afp-footer{
+    .source{
+      margin-left: 0;
+      margin-right: 6px;
+    }
+  }
+}

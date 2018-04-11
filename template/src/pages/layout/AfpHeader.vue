@@ -1,10 +1,12 @@
-<template>
-  <hr>
+<template lang="html">
+  <header>
+    <hr>
+  </header>
 </template>
 
 <script>
 export default {
-  name: 'Border'
+  name: 'AfpHeader'
 }
 </script>
 

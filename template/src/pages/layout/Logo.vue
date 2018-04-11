@@ -3,7 +3,7 @@
     href="http://u.afp.com/interactive-graphics"
     target="_blank">
     <img
-      src="../assets/svg/afp_logo.svg"
+      src="@/assets/img/svg/afp_logo.svg"
       alt="Logo AFP">
   </a>
 </template>

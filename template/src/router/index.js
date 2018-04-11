@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import i18n from '@/i18n'
-// import Home from '@/pages/Home'
-// Define here your main component
+import Credits from '@/pages/Credits'
 {{#if_eq mainComponent "basic"}}
+// Define here your main component
 import Home from '@/components/HelloWorld'
 {{/if_eq}}
 {{#if_eq mainComponent "tabstory"}}
@@ -16,7 +16,6 @@ import Home from '@/components/ModalGallery'
 {{#if_eq mainComponent "calculator"}}
 import Home from '@/components/Calculator'
 {{/if_eq}}
-
 Vue.use(Router)
 
 const router = new Router({
@@ -28,6 +27,11 @@ const router = new Router({
       path: '/home',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/credits',
+      name: 'credits',
+      component: Credits
     }
   ]
 })
