@@ -1,0 +1,24 @@
+last_update: Dernière mise à jour :
+about: À propos :
+sources: Sources :
+writing: Édition :
+text: Texte :
+design: Design :
+development: Développement :
+translation: Traduction :
+not-compatible: Votre navigateur n'est peut-être pas supporté par ce module.
+update: Pour une expérience optimale, mettez à jour votre navigateur ou essayez avec un navigateur supporté (Chrome, Firefox, Safari, Opera, Edge) à jour.
+continue-anyway:	Continuer quand même ?
+thanks: Remerciements
+credits: Credits
+update: {{ updated_date }}
+
+[authors]
+name: {{ author }}
+role: Writer
+[]
+
+title: Bienvenue 📦 🚀
+key: valeur
+
+source: Sources: Vos sources

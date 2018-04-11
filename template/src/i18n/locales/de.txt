@@ -1,0 +1,24 @@
+last_update: Letzte Aktualisierung:
+about: Über:
+sources: Quellen:
+writing: Version:
+text: Text:
+design: Design:
+development: Entwicklung:
+translation: Übersetzung:
+not-compatible: Ihr Browser ist möglicherweise nicht kompatibel
+update: Bitte aktualisieren Sie Ihren Browser oder nehmen einen anderen (Chrome, Firefox, afari, Opera, Edge)
+continue-anyway: Wollen Sie trotzdem weitermachen?
+thanks: Danke:
+credits: Verantwortlich:
+update: {{ updated_date }}
+
+[authors]
+name: {{ author }}
+role: Writer
+[]
+
+title: Willkommen 📦 🚀
+key: Wert
+
+source: Sources: Your sources

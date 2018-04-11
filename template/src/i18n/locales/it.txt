@@ -1,0 +1,24 @@
+last_update: Ultimo aggiornamento:
+about: A proposito:
+sources: Fonti:
+writing: Testo:
+text:
+design: Design:
+development: Sviluppo:
+translation: Traduzione:
+not-compatible:
+update:
+continue-anyway:
+thanks: Ringraziamenti:
+credits:
+update: {{ updated_date }}
+
+[authors]
+name: {{ author }}
+role: Writer
+[]
+
+title: Benvenuto 📦 🚀
+key: valore
+
+source: Sources: Vos sources

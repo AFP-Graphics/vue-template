@@ -1,0 +1,24 @@
+last_update: Última atualização:
+about: Sobre:
+sources: Fontes:
+writing: Edição:
+text: Texto:
+design: Design:
+development: Desenvolvimento:
+translation: Tradução:
+not-compatible: Seu navegador não é compatível com esse módulo.
+update: Para uma experiência otimizada, atualize seu navegador ou tente com um navegador ompatível (Chrome, Firefox, Safari, Opera, Edge) atualizado.
+continue-anyway: Deseja continuar?
+thanks: Agradecimento:
+credits: Créditos:
+update: {{ updated_date }}
+
+[authors]
+name: {{ author }}
+role: Writer
+[]
+
+title: Bem-vindo 📦 🚀
+key: valor
+
+source: Sources: Vos sources
