@@ -5,7 +5,11 @@
     <afp-header/>
 
     <main>
-      <router-view/>
+      <transition
+        name="fade-in"
+        mode="out-in">
+        <router-view :key="$route.name"/>
+      </transition>
     </main>
 
     <afp-footer/>
