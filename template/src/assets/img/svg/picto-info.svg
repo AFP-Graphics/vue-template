@@ -1,13 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <title>Plan de travail 54</title>
-  <g id="Calque_1" data-name="Calque 1">
+  <g fill="#fff">
     <path class="cls-1" d="M6.178,7.018H6.7c.364,0,.46.507.46.855V10.44c0,.348-.1.538-.46.538H6.178v.982h3.96v-.982H9.6c-.364,0-.46-.19-.46-.538V6.02H6.178ZM8,2.883A1.157,1.157,0,1,0,9.156,4.04,1.133,1.133,0,0,0,8,2.883Z"/>
   </g>
 </svg>
