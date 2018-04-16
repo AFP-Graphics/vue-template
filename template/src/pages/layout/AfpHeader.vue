@@ -1,12 +1,17 @@
 <template lang="html">
   <header>
+    <debug/>
     <hr>
   </header>
 </template>
 
 <script>
+import Debug from '@/pages/layout/Debug'
+
 export default {
-  name: 'AfpHeader'
+  name: 'AfpHeader',
+
+  components: { Debug }
 }
 </script>
 
