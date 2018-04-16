@@ -133,7 +133,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '~@/assets/sass/variables.scss';
+  @import '~@/assets/styles/variables';
 
   $draggerRadius: 14.5px;
   .slider {

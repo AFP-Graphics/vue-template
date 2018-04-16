@@ -1,7 +1,7 @@
 body {
   font-family: $source_sans_pro;
   color: $font_color;
-  line-height: 1.6;
+  line-height: 1.15em;
   -webkit-tap-highlight-color: $black;
   -webkit-tap-highlight-color: transparent; /* For some Androids */
   text-rendering: optimizeLegibility;
@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $f23;
-  line-height: 1.05;
+  line-height: 1.05em;
   letter-spacing: -.025rem;
   font-weight: 400;
 }
@@ -30,7 +30,7 @@ h2 {
 
 h3 {
   font-size: $f15;
-  line-height: 1.8;
+  line-height: 1.8em;
   letter-spacing: -.015625rem;
   font-family: "Source Sans Pro", sans-serif;
 }

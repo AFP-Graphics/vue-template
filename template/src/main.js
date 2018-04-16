@@ -1,14 +1,10 @@
-// Utilitaires
 import Vue from 'vue'
-import '@/utils/googleAnalytics'
+import i18n from '@/i18n'
+import router from '@/router'
 // import store from '@/store'
-import { i18n } from '@/utils/i18n'
-import router from '@/utils/router'
+import '@/utils/googleAnalytics'
 
-// Composants
 import App from '@/App'
-
-import '@/assets/sass/main.scss'
 
 new Vue({ // eslint-disable-line no-new
   router,

@@ -148,7 +148,7 @@ module.exports = env => {
     devServer: {
       compress: true,
       hot: true,
-      port: 8080,
+      port: 8081,
       quiet: true,
       clientLogLevel: 'warning',
       overlay: {

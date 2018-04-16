@@ -4,6 +4,7 @@
 
 Made with ❤️ by AFP Graphics Team.
 Based on vue-webpack-template v{{ template_version }}
+Adding `?lang=xx` will switch your graphic into the `xx` locale. You can find the list of available locales in `src/i18n/locales`
 
 ## Build Setup
 
@@ -47,7 +48,7 @@ PUBLIC_SERVER_PATH=
 PUBLIC_SERVER_USERNAME=
 ```
 
-Then, 
+Then,
 
 ``` bash
 npm run deploy

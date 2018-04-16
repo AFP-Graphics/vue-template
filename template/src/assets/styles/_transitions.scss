@@ -1,0 +1,8 @@
+.appear-after-loading-enter-active, .appear-after-loading-leave-active{ transition: all 350ms ease; }
+.appear-after-loading-enter{ opacity: 0; transform: translateY(20px); }
+.appear-after-loading-leave-to{ opacity: 0; transform: translateY(-20px); }
+
+.fade-in-enter-active, .fade-in-leave-active{ transition: all 350ms ease; }
+.fade-in-enter{ opacity: 0; transform: translateY(10px); }
+.fade-in-leave-to{ opacity: 0; transform: translateY(-10px); }
+.fade-in-enter, .fade-in-leave-to{ opacity: 0; }

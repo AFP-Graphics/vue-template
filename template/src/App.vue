@@ -1,66 +1,48 @@
 <template>
-  <div id="app">
-    <header>
-      <border />
-    </header>
-    <router-view />
-    <footer>
-      <router-link :to="`/${this.$i18n.locale}/credits`">
-        <i
-          v-if="$route.name !== 'credits'"
-          class="UI-icon UI-info" />
-      </router-link>
-      <div class="source">
-        <span v-if="$route.path !== '/'">
-          {{ $t('source') }}
-        </span>
-      </div>
-      <logo />
-    </footer>
-  </div>
+  <section
+    id="app"
+    :class="$i18n.locale">
+    <afp-header/>
+
+    <main>
+      <transition
+        name="fade-in"
+        mode="out-in">
+        <router-view :key="$route.name"/>
+      </transition>
+    </main>
+
+    <afp-footer/>
+  </section>
 </template>
 
 <script>
 // Utilities
+import 'normalize.css'
 import Pym from 'pym.js'
 
-// Composants
-import Border from '@/components/Border'
-import Logo from '@/components/Logo'
+// Components
+import AfpHeader from '@/pages/layout/AfpHeader'
+import AfpFooter from '@/pages/layout/AfpFooter'
 
 export default {
   name: 'App',
-  components: { Border, Logo },
+
+  components: { AfpHeader, AfpFooter },
+
   mounted () {
     new Pym.Child({ polling: 500 }) // eslint-disable-line no-new
   }
 }
 </script>
 
-<style lang="scss" scoped>
-  @import "~@/assets/sass/variables";
+<style lang="scss">
+  @import "~@/assets/styles/main";
 
-  main, footer {
-    padding: 12px 16px 18px 12px;
-  }
+  #app{
+    max-width: 990px;
+    margin: 0 auto;
 
-  footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    .source {
-      font-size: $f12;
-      flex: 1;
-    }
-
-    i:before {
-      content:"\2139";
-      color: black;
-    }
-
-    .UI-info {
-      margin-right: 6px;
-    }
+    > main, .afp-footer { @extend %main-padding; }
   }
 </style>
