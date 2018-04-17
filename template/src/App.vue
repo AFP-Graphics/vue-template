@@ -4,13 +4,11 @@
     :class="$i18n.locale">
     <afp-header/>
 
-    <main>
-      <transition
-        name="fade-in"
-        mode="out-in">
-        <router-view :key="$route.name"/>
-      </transition>
-    </main>
+    <transition
+      name="fade-in"
+      mode="out-in">
+      <router-view :key="$route.name"/>
+    </transition>
 
     <afp-footer/>
   </section>

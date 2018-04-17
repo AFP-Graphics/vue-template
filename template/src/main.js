@@ -11,7 +11,7 @@ new Vue({ // eslint-disable-line no-new
   i18n,
   // store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#vue-app')
 
 if (module.hot) {
   module.hot.accept()
