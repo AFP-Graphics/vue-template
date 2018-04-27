@@ -5,7 +5,10 @@
       :tabs="tabs"
       :current.sync="current" />
     <div :class="`tab-story-container ${direction}`">
-      <transition name="slide">
+      <!-- TRANSITION - Choose between: fade/slide -->
+      <transition
+        name="slide"
+        mode="out-in">
         <display-tab
           :tab="currentTab"
           :key="current" />
@@ -47,34 +50,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tab-story-container {
-  position: relative;
-  overflow-x: hidden;
+  .tab-story-container {
+    position: relative;
+    overflow-x: hidden;
 
-  .slide-enter-active, .slide-leave-active {
-    transition: transform .3s;
-  }
+    .slide-enter-active, .slide-leave-active {
+      transition: transform .2s;
+    }
 
-  .slide-leave-to {
-    position: absolute;
-  }
+    &.right {
+      .slide-enter {
+        transform: translate(100%, 0);
+      }
+      .slide-leave-to {
+        transform: translate(-100%, 0);
+      }
+    }
 
-  &.right {
-    .slide-enter {
-    transform: translate(100%, 0);
+    &.left {
+      .slide-enter {
+        transform: translate(-100%, 0);
+      }
+      .slide-leave-to {
+        transform: translate(100%, 0);
+      }
     }
-    .slide-leave-to {
-      transform: translate(-100%, 0);
-    }
-  }
 
-  &.left {
-    .slide-enter {
-    transform: translate(-100%, 0);
+    .fade-enter-active {
+      transition: opacity .3s ease;
     }
-    .slide-leave-to {
-      transform: translate(100%, 0);
+    .fade-leave-active {
+      transition: opacity .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
     }
   }
-}
 </style>
