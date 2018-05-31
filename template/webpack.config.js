@@ -122,13 +122,21 @@ module.exports = env => {
             limit: 10000,
             name: path.join('static/fonts', '[name].[hash:7].[ext]')
           }
+        },
+        {
+          test: /\.modernizrrc$/,
+          use: [
+            'modernizr-loader',
+            'json-loader'
+          ]
         }
       ]
     },
     resolve: {
       extensions: ['*', '.js', '.vue', '.json'],
       alias: {
-        '@': path.resolve(__dirname, 'src')
+        '@': path.resolve(__dirname, 'src'),
+        modernizr$: path.resolve(__dirname, '.modernizrrc')
       }
     },
     plugins: [

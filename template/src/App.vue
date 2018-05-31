@@ -3,6 +3,13 @@
     id="app"
     :class="$i18n.locale">
     <afp-header/>
+    <div
+      v-if="supportAllFeatures === false"
+      id="browser-warning">
+      <h1>{{ $t('not-compatible') }}</h1>
+      <p>{{ $t('update-browser') }}</p>
+      <button @click="supportAllFeatures = true">{{ $t('continue-anyway') }}</button>
+    </div>
 
     <transition
       name="fade-in"
@@ -28,6 +35,12 @@ export default {
 
   components: { AfpHeader, AfpFooter },
 
+  data: () => {
+    return {
+      supportAllFeatures: Object.values(window.Modernizr).every(d => d)
+    }
+  },
+
   mounted () {
     new Pym.Child({ polling: 500 }) // eslint-disable-line no-new
   }
@@ -42,5 +55,15 @@ export default {
     margin: 0 auto;
 
     > main, .afp-footer { @extend %main-padding; }
+  }
+
+  #browser-warning {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
   }
 </style>
