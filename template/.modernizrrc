@@ -1,0 +1,18 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "css/boxsizing",
+    "css/boxshadow",
+    "css/backgroundsize",
+    "css/flexbox",
+    "css/mediaqueries",
+    "css/mediaqueries",
+    "css/transforms",
+    "css/transitions",
+    "css/rgba",
+    "svg/inline"
+  ]
+}

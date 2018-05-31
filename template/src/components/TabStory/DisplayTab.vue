@@ -36,8 +36,8 @@ export default {
 
   h3 {
     text-align: center;
-    margin-bottom: 0px;
-    font-family: 'Georgia';
+    margin-bottom: 0;
+    font-family: 'Georgia', 'Source Sans Pro', sans-serif;
     font-weight: 400;
     big {
       display: inline-block;
@@ -48,20 +48,9 @@ export default {
     }
   }
 
-  .lazy-img-container {
-    display: block;
-    position: relative;
-    height: 0;
-    overflow-y: hidden;
-    padding-bottom: 59.4%; //Give image ratio
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-    }
+  img {
+    width: 100%;
+    height: auto;
   }
 
   p.lead {
@@ -70,10 +59,6 @@ export default {
 
   ul {
     padding-left: 25px;
-    margin-bottom: 0px;
-
-    li:not(:last-child) {
-      margin-bottom: 12px;
-    }
+    margin: 0;
   }
 </style>

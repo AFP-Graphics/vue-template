@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = env => {
   return {
@@ -59,47 +60,51 @@ module.exports = env => {
                 limit: 10000,
                 name: path.join('static/img', '[name].[hash:7].[ext]')
               }
-            },
-            {
-              loader: 'img-loader',
-              options: {
-                enabled: env.NODE_ENV === 'production',
-                gifsicle: {
-                  optimizationLevel: 2,
-                  interlaced: true
-                },
-                mozjpeg: {
-                  quality: 60,
-                  progressive: true,
-                  arithmetic: false
-                },
-                optipng: false, // disabled
-                pngquant: {
-                  floyd: 0.5,
-                  speed: 2,
-                  quality: 60
-                },
-                svgo: {
-                  plugins: [
-                    { removeTitle: true },
-                    { convertPathData: true },
-                    { cleanupAttrs: true },
-                    { removeDoctype: true },
-                    { removeXMLProcInst: true },
-                    { removeComments: true },
-                    { removeMetadata: true },
-                    { removeDesc: true },
-                    { removeUselessDefs: true },
-                    { removeEditorsNSData: true },
-                    { removeEmptyAttrs: true },
-                    { minifyStyles: true },
-                    { convertTransform: true },
-                    { removeUselessStrokeAndFill: true },
-                    { removeUnusedNS: true }
-                  ]
-                }
-              }
             }
+            // WEBPACK 4 - img-loader has issues. Please check http://infodyn-gitlab.afp.com/news-interactive-templates/vue-template/issues/2
+            // In the meantime don't forget to optimize images by yourself.
+            // When img-loader has fixed its issues, add it to package.json before uncommenting
+            //
+            // {
+            //   loader: 'img-loader',
+            //   options: {
+            //     enabled: env.NODE_ENV === 'production',
+            //     gifsicle: {
+            //       optimizationLevel: 2,
+            //       interlaced: true
+            //     },
+            //     mozjpeg: {
+            //       quality: 60,
+            //       progressive: true,
+            //       arithmetic: false
+            //     },
+            //     optipng: false, // disabled
+            //     pngquant: {
+            //       floyd: 0.5,
+            //       speed: 2,
+            //       quality: 60
+            //     },
+            //     svgo: {
+            //       plugins: [
+            //         { removeTitle: true },
+            //         { convertPathData: true },
+            //         { cleanupAttrs: true },
+            //         { removeDoctype: true },
+            //         { removeXMLProcInst: true },
+            //         { removeComments: true },
+            //         { removeMetadata: true },
+            //         { removeDesc: true },
+            //         { removeUselessDefs: true },
+            //         { removeEditorsNSData: true },
+            //         { removeEmptyAttrs: true },
+            //         { minifyStyles: true },
+            //         { convertTransform: true },
+            //         { removeUselessStrokeAndFill: true },
+            //         { removeUnusedNS: true }
+            //       ]
+            //     }
+            //   }
+            // }
           ]
         },
         {
@@ -117,6 +122,13 @@ module.exports = env => {
             limit: 10000,
             name: path.join('static/fonts', '[name].[hash:7].[ext]')
           }
+        },
+        {
+          test: /\.modernizrrc$/,
+          use: [
+            'modernizr-loader',
+            'json-loader'
+          ]
         }
       ]
     },
@@ -124,7 +136,7 @@ module.exports = env => {
       extensions: ['*', '.js', '.vue', '.json'],
       alias: {
         '@': path.resolve(__dirname, 'src'),
-        vue: 'vue/dist/vue.js'
+        modernizr$: path.resolve(__dirname, '.modernizrrc')
       }
     },
     plugins: [
@@ -136,6 +148,7 @@ module.exports = env => {
         inject: 'body',
         favicon: './favicon.ico'
       }),
+      new VueLoaderPlugin(),
       new webpack.NamedModulesPlugin(),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.DefinePlugin({
