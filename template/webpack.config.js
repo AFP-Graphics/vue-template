@@ -128,8 +128,7 @@ module.exports = env => {
     resolve: {
       extensions: ['*', '.js', '.vue', '.json'],
       alias: {
-        '@': path.resolve(__dirname, 'src'),
-        vue: 'vue/dist/vue.js'
+        '@': path.resolve(__dirname, 'src')
       }
     },
     plugins: [
